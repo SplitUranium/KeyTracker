@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KeyTracker</string>
+    <string name="chains">Chains:</string>
 </resources>

@@ -13,12 +13,13 @@ class MainActivity : AppCompatActivity() {
         var chains = 0
         var aember = 0
         var keys = 0
+        var forgeCost = 6
 
         // Need to generate chains map here
 
         fun forgeKey() {
-            if (aember >= 6) {
-                aember -= 6
+            if (aember >= forgeCost) {
+                aember -= forgeCost
                 keys += 1
             } else d("Test", "Not enough aember!")  //Add this to on screen error message later
         }
@@ -26,15 +27,15 @@ class MainActivity : AppCompatActivity() {
         fun unForgeKey() {
             if (keys >= 1) {
                 keys -= 1
-                aember += 6
+                aember += forgeCost
             } else d("Test","No key to unforge!")  //Add this to on screen error message later
         }
 
         // Test data
 
         fun testStuff() {
-            aember = 0
-            keys = 0
+            aember = 6
+            keys = 1
 
             d("Test", "Aember: $aember")
             d("Test", "Keys: $keys")
